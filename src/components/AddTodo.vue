@@ -8,8 +8,6 @@
 </template>
 
 <script>
-//import uuid from 'uuid';
-
 export default {
     name: "AddToDo",
     data(){
@@ -26,7 +24,6 @@ export default {
             }
             // Send up to parent
             this.$emit('add-todo', newTodo);
-
             this.title = '';
         }
     }
@@ -35,14 +32,32 @@ export default {
 
 <style scoped>
     form{
-        display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 20em;
     }
     input[type="text"]{
-        flex: 10;
+        flex: 20;
         padding: 5px;
+        width: 500px;
     }
     input[type="Submit"]{
-        flex: 2;
-        
+        cursor: pointer;
+        background-color: turquoise;
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        border-radius: 50%      
+    }
+    input[type="Submit"]:hover{
+        color: blue;
+        background: color blue;
+        cursor: pointer;
     }
 </style>
